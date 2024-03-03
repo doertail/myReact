@@ -1,4 +1,4 @@
-function Detail_Page() {
+function Detail() {
     return (
       <div className="container">
         <div className="row">
@@ -16,4 +16,4 @@ function Detail_Page() {
     )
   }
 
-export default Detail_Page;
+export default Detail;
