@@ -2,9 +2,10 @@
 import {Button, Navbar, Container, Nav} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import {data} from './data.js'
 // import { useState } from 'react';
 // import {/*data, Item,*/} from './data.js';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import {Routes, Route, useNavigate, Outlet} from 'react-router-dom';
 import Main from './pages/Main.js';
 import Detail from './pages/Detail.js';
 import About from './pages/About.js';
@@ -29,7 +30,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Main/>}/>
-        <Route path="/detail" element={<Detail/>}/>
+        <Route path="/detail/:id" element={<Detail shoes={data}/>}/>
         <Route path="/about" element={<About/>}>
           <Route path="member" element={<div>멤버임</div>}/>
           <Route path="location" element={<div>위치 정보임</div>}/>
